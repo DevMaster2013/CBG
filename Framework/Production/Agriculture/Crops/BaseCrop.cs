@@ -1,4 +1,5 @@
 ﻿using Framework.Core;
+using Framework.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

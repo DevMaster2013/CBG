@@ -45,14 +45,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMainGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmMainGame.Designer.cs">
+      <DependentUpon>frmMainGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceControllers\FarmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceControllers\FarmControl.Designer.cs">
+      <DependentUpon>FarmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceControllers\UtilityControls\BlockSizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceControllers\UtilityControls\BlockSizeControl.Designer.cs">
+      <DependentUpon>BlockSizeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceControllers\UtilityControls\ProductionInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceControllers\UtilityControls\ProductionInfoControl.Designer.cs">
+      <DependentUpon>ProductionInfoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMainGame.resx">
+      <DependentUpon>frmMainGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceControllers\FarmControl.resx">
+      <DependentUpon>FarmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceControllers\UtilityControls\BlockSizeControl.resx">
+      <DependentUpon>BlockSizeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceControllers\UtilityControls\ProductionInfoControl.resx">
+      <DependentUpon>ProductionInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -42,10 +42,12 @@
   <ItemGroup>
     <Compile Include="Buildings\BaseBuilding.cs" />
     <Compile Include="Core\BlocksSize.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="Core\GameTime.cs" />
-    <Compile Include="Core\Season.cs" />
-    <Compile Include="Core\TimeScaleUnit.cs" />
+    <Compile Include="Core\Enums\Season.cs" />
+    <Compile Include="Core\Enums\TimeScaleUnit.cs" />
     <Compile Include="Production\Agriculture\Crops\BaseCrop.cs" />
+    <Compile Include="Production\Agriculture\Crops\Wheat.cs" />
     <Compile Include="Production\Agriculture\Farm.cs" />
     <Compile Include="Production\ProductionBuilding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
