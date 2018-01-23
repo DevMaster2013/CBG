@@ -1,0 +1,67 @@
+namespace cbg
+{		
+	class CBGObject
+	{
+		std::string _name;
+	};	
+	class Product : public CBGObject
+	{
+	};
+	class ProductItem
+	{
+		Product* _product;
+		double _baseUnitPrice;
+		double _quantity;
+	};
+	class SuppliedProduct
+	{
+		ProductItem* _suppliedProduct;
+		double _qualityFactor;
+	};
+	class Human : public CBGObject
+	{
+		bool _isMale;
+		double _age;
+		double _produtivity;
+	};
+	class Service
+	{
+		double _cost;
+	};	
+	class ProductionTool : public CBGObject
+	{
+		double _effiecency;
+	};
+	class BuildingComponent
+	{
+		double _maintenenceCost;
+		std::vector<SuppliedProduct*> _suppliedProducts;
+	};
+	class StorehouseComponent : public BuildingComponent
+	{
+		size_t _totalCapacity;
+		size_t _currentHolds;
+	};
+	class ServiceComponent : public BuildingComponent
+	{
+		std::vector<Service*> _services;
+	};
+	class ResidentComponent : public BuildingComponent
+	{
+		std::vector<Human*> _residences;
+		size_t _housingCapacity;
+		double _housingQuality;
+	};		
+	class ProductionComponent : public BuildingComponent
+	{
+		std::vector<ProductItem*> _producedProducts;
+		std::vector<ProductItem*> _requiredComponent;
+		std::vector<ProductionTool*> _productionTools;
+		std::vector<Human*> _workers;
+	};	
+	class Building : public CBGObject
+	{
+		std::vector<BuildingComponent*> _components;
+	};
+}
+

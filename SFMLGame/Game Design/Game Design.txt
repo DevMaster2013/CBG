@@ -1,0 +1,32 @@
+* We have a city that have peoples, these peoples can be childs, tenagers, youngs, elders (men & womens).
+* The youngs can be work force, and work in the production places.
+* The population can be grown through marriage.
+* The production place needs (work force, budget, tools, transporation, raw items) and it will produce products.
+* The production place take a certain time, cost (budget), tools, raw items to produce one unit of the product.
+* The production place then transport the products to the storehouse.
+* The store house contains all the tools and the raw items needed for produciton.
+* Some raw items are gathered from earth throw miners, farming, collecting, cutting, ...
+* The garage contains transportation that are called to transport products.
+* Each work labour has a wage that deduced from the budget of the product place.
+* The profit of the product place are computed using (outcome - (wages + cost + maintainence)).
+* The government collect the products and pay for them for the product places, and sell them for others.
+* Each production place contain internal storehouse that contain its tools, raw items, products until selled to government.
+* The garage collect profit from the service cost that are collected from the product place to deliver / take products.
+* The population needs some sort of these products to live.
+* The governement builds some sell-points for some products that enable people to buy what they need from them.
+* The governemtn needs water, that can be collected from the wells that are built in the city.
+* The water are free to be used by all assets in the city.
+* The city can import required products and tools from outside from a specific cost.
+* The city can export the produced products to outside for specific profit.
+* The importing and exporting are handled through outside-trading posts.
+* The production palces sell and buy products from the trading posts, and collect / deliver them to store houses.
+* The production places, garage, trading-posts, sell-points can hire any work labour required which enhances its productivity.
+* The governement must build homes for their peoples for a small amout of money.
+* The people can then upgrades their homes as they need for some money.
+* Each house has a certin maintenace that are payed for the governemtn for maintining the house.
+* The maintainenece of production places, houses, ... are handled through maintainenece office.
+* The governmet can build mousques to enhance the productivity of the people.
+* Every city has a city center building that contain information about the city income/outcome, and manage some Managerial Decisions of the city.
+* Each house has a housing quality factor that affects the productivity of the peoples live in it.
+* The housgin quality affected with the maintenence status and the support products available.
+* Each supplied product has a factor to enhance the housing quality of the residenet that exist in.

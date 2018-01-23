@@ -149,7 +149,37 @@
     <ClCompile Include="..\ThirdParty\SFML-2.4.2\include\ImGUI\imgui.cpp" />
     <ClCompile Include="..\ThirdParty\SFML-2.4.2\include\ImGUI\imgui_demo.cpp" />
     <ClCompile Include="..\ThirdParty\SFML-2.4.2\include\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="Building.cpp" />
+    <ClCompile Include="BuildingComponent.cpp" />
+    <ClCompile Include="CoalMine.cpp" />
     <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="IronMine.cpp" />
+    <ClCompile Include="MaintainedComponent.cpp" />
+    <ClCompile Include="Product.cpp" />
+    <ClCompile Include="ProductionComponent.cpp" />
+    <ClCompile Include="ProductItem.cpp" />
+    <ClCompile Include="ResidentComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Game Design\Class Diagram.txt" />
+    <Text Include="Game Design\Game Design.txt" />
+    <Text Include="Game Design\Game Entities.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Building.h" />
+    <ClInclude Include="BuildingComponent.h" />
+    <ClInclude Include="CoalMine.h" />
+    <ClInclude Include="IDrawableInterfaceObject.h" />
+    <ClInclude Include="IronMine.h" />
+    <ClInclude Include="IUpdatableObject.h" />
+    <ClInclude Include="MaintainedComponent.h" />
+    <ClInclude Include="Product.h" />
+    <ClInclude Include="ProductionComponent.h" />
+    <ClInclude Include="ProductItem.h" />
+    <ClInclude Include="ResidentComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Building.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

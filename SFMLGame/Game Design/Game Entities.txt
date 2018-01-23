@@ -1,0 +1,64 @@
+* City
+* Human
+* Production Place
+* Population
+* Marriage
+* Work Force
+* Budget
+* Production Tool
+* Transportation
+* Product
+* Store House
+* Raw Item
+* Raw Item Source (Mine, Farm, Forest, ....)
+* Garage
+* Wage
+* Labour
+* Profit
+* Cost
+* Maintainence Cost
+* Internal Store House
+* Government
+* Sell-Point
+* Water
+* Well
+* Import
+* Export
+* Trading Post
+* Outside Trading Post
+* Productivity
+* House
+* Maintainence Office
+* Mosque
+* City Center
+* Income
+* Outcome
+* Managerial Decision
+---------------------------------------------------------------------------------------------------
+- Building
+- Production
+- 
+- Building
+	- Production Building
+		- Raw Source
+			- Mine
+				- Iron Mine
+				- Coal Mine
+			- Farm
+				- Wheat Farm
+			- Timbermill
+			- Quarry
+		- Factory
+			- Stone Block Factory
+			- Logs Factory
+			- Wood Factory
+			- Flour Factory
+			- Breed Factory
+			- Iron Factory			
+	- Resident Building
+		- House
+	- Service Building
+		- Garage
+		- Well
+		- Maintainence Office
+		- Mosque

@@ -14,10 +14,130 @@
     <ClCompile Include="..\ThirdParty\SFML-2.4.2\include\ImGUI\imgui-SFML.cpp">
       <Filter>ImGUI</Filter>
     </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>Framework\Source\Products</Filter>
+    </ClCompile>
+    <ClCompile Include="Building.cpp">
+      <Filter>Framework\Source\Buildings</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildingComponent.cpp">
+      <Filter>Framework\Source\Building Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CoalMine.cpp">
+      <Filter>Framework\Source\Buildings\Mines</Filter>
+    </ClCompile>
+    <ClCompile Include="IronMine.cpp">
+      <Filter>Framework\Source\Buildings\Mines</Filter>
+    </ClCompile>
+    <ClCompile Include="MaintainedComponent.cpp">
+      <Filter>Framework\Source\Building Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductionComponent.cpp">
+      <Filter>Framework\Source\Building Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductItem.cpp">
+      <Filter>Framework\Source\Products</Filter>
+    </ClCompile>
+    <ClCompile Include="ResidentComponent.cpp">
+      <Filter>Framework\Source\Building Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ImGUI">
       <UniqueIdentifier>{6abe3f88-ff91-4b89-9ada-f6d6e040bb8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Desing">
+      <UniqueIdentifier>{cdf41391-2421-4441-9d60-252a93fbf039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{f684875d-82f0-4aca-8957-061e1e6a799b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Include">
+      <UniqueIdentifier>{40ddf8e2-1f8d-4807-b775-ef849d665612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Include\Building Components">
+      <UniqueIdentifier>{93a1966f-73be-40d4-9d8a-8ddb30f7b283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Include\Buildings">
+      <UniqueIdentifier>{3574cc27-9b6f-45d0-9803-730e2182ad3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Include\Buildings\Mines">
+      <UniqueIdentifier>{5cf021e2-6de9-42c6-b7af-1d85ff31df24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Include\Products">
+      <UniqueIdentifier>{48198e92-b7c8-4058-b1c3-b95311d13679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source">
+      <UniqueIdentifier>{1fc46805-4ed3-49fd-801f-a455f4f76e78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source\Building Components">
+      <UniqueIdentifier>{7f3da0b9-efa6-44a4-8949-7a710e3e8787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source\Buildings">
+      <UniqueIdentifier>{c4554583-3b9c-49e5-85b6-952c41aa2b7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source\Products">
+      <UniqueIdentifier>{f00b0fa5-e6d3-4cf0-af92-ade78562c27d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source\Buildings\Mines">
+      <UniqueIdentifier>{ddf22607-6a39-4c5b-855b-5924f6ad5d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Inline">
+      <UniqueIdentifier>{bf994fa8-8b61-4d44-8e86-1a863e720e79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Inline\Buildings">
+      <UniqueIdentifier>{0516e099-f31b-499b-85c4-3ead7cf75404}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Game Design\Game Design.txt">
+      <Filter>Game Desing</Filter>
+    </Text>
+    <Text Include="Game Design\Game Entities.txt">
+      <Filter>Game Desing</Filter>
+    </Text>
+    <Text Include="Game Design\Class Diagram.txt">
+      <Filter>Game Desing</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Product.h">
+      <Filter>Framework\Include\Products</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductItem.h">
+      <Filter>Framework\Include\Products</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingComponent.h">
+      <Filter>Framework\Include\Building Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MaintainedComponent.h">
+      <Filter>Framework\Include\Building Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ResidentComponent.h">
+      <Filter>Framework\Include\Building Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductionComponent.h">
+      <Filter>Framework\Include\Building Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Building.h">
+      <Filter>Framework\Include\Buildings</Filter>
+    </ClInclude>
+    <ClInclude Include="IronMine.h">
+      <Filter>Framework\Include\Buildings\Mines</Filter>
+    </ClInclude>
+    <ClInclude Include="CoalMine.h">
+      <Filter>Framework\Include\Buildings\Mines</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawableInterfaceObject.h">
+      <Filter>Framework\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="IUpdatableObject.h">
+      <Filter>Framework\Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Building.inl">
+      <Filter>Framework\Inline\Buildings</Filter>
+    </None>
   </ItemGroup>
 </Project>
