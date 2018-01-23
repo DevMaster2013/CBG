@@ -14,5 +14,5 @@ ProductItem::ProductItem(Product * product, double unitPrice, double quantity)
 
 void ProductItem::drawInterface()
 {
-	ImGui::Text("%2.2f tons of %s --> %2.2f pound", quantity, product->name, quantity * unitPrice);
+	ImGui::Text("%2.2f tons of %s --> %2.2f pound", quantity, product->name.c_str(), quantity * unitPrice);
 }

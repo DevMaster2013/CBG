@@ -1,10 +1,15 @@
 template<typename T>
 T* Building::getComponent()
 {
-	for (size_t i = 0; i < components.size(); i++)
-	{
-		if (typeid(components[i]) == typeid(T))
-			return (T*)components[i];
-	}
-	return nullptr;
+	std::string compType = std::string(typeid(T).name());
+	if (components.find(compType) == components.end())
+		return nullptr;
+	return (T*)components[compType];
+}
+
+template<typename T>
+void Building::addComponent(T* component)
+{
+	std::string comType = std::string(typeid(T).name());
+	components[comType] = component;
 }

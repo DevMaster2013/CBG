@@ -6,7 +6,10 @@
 #include <imgui-SFML.h>
 
 MaintainedComponent::MaintainedComponent(Building * parentBuilding, double maintainenceTime, double maintainenceCost)
-	: BuildingComponent("Maintanence", parentBuilding), maintainenceTime(maintainenceTime), maintainenceCost(maintainenceCost)
+	: BuildingComponent("Maintanence", parentBuilding)
+	, maintainenceTime(maintainenceTime)
+	, maintainenceCost(maintainenceCost)
+	, runningTime(0.0)
 {
 }
 
@@ -33,8 +36,7 @@ void MaintainedComponent::onDrawInterfaceComponent()
 		ImGui::Text("Breakdown for %2.2f seconds", -remTime);
 	ImGui::TextUnformatted("Maintainence Cost: ");
 	ImGui::SameLine();
-	ImGui::Text("%2.2f seconds", maintainenceCost);
-	ImGui::Separator();
+	ImGui::Text("%2.2f L.E", maintainenceCost);
 	if (ImGui::SmallButton("Maintain"))
 	{
 		runningTime = 0.0;

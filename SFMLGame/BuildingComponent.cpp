@@ -6,7 +6,8 @@
 #include <imgui-SFML.h>
 
 BuildingComponent::BuildingComponent(const std::string & name, Building * parentBuilding)
-	: name(name), parentBuilding(parentBuilding)
+	: name(name)
+	, parentBuilding(parentBuilding)
 {
 }
 
@@ -17,9 +18,7 @@ void BuildingComponent::update(double elapsedSeconds)
 
 void BuildingComponent::drawInterface()
 {
-	if (ImGui::BeginChild(name.c_str()))
-	{
-		onDrawInterfaceComponent();
-	}
-	ImGui::EndChild();
+	ImGui::Separator();
+	onDrawInterfaceComponent();
+	ImGui::Separator();
 }

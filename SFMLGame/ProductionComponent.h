@@ -12,7 +12,7 @@ public:
 	std::vector<ProductItem*> producedProducts;
 
 public:
-	ProductionComponent(Building* parentBuilding, double totalProduction, double productionRate);
+	ProductionComponent(Building* parentBuilding, double productionRate);
 
 private:
 	virtual void onUpdateComponent(double elapsedSeconds) override;

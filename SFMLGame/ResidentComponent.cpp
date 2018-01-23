@@ -17,7 +17,7 @@ void ResidentComponent::onDrawInterfaceComponent()
 {
 	ImGui::TextUnformatted("Housing Quality: ");
 	ImGui::SameLine();
-	ImGui::Text("%2.2f ton", housingQuality);
+	ImGui::Text("%2.2f", housingQuality);
 	ImGui::TextUnformatted("Capacity: ");
 	ImGui::SameLine();
 	ImGui::Text("%d human", capacity);

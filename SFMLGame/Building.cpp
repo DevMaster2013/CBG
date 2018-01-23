@@ -17,8 +17,8 @@ void Building::update(double elapsedSeconds)
 	bool updateAll = maintanence == nullptr || maintanence->isWorking();
 	if (updateAll)
 	{
-		for (size_t i = 0; i < components.size(); i++)
-			components[i]->update(elapsedSeconds);
+		for each (auto& component in components)
+			component.second->update(elapsedSeconds);
 		onUpdateBuilding(elapsedSeconds);
 	}
 	else
@@ -27,10 +27,14 @@ void Building::update(double elapsedSeconds)
 
 void Building::drawInterface()
 {
+	ImGui::SetNextWindowSize(ImVec2(1200, 700), ImGuiSetCond_FirstUseEver);
 	if (ImGui::Begin(name.c_str()))
 	{
-		for (size_t i = 0; i < components.size(); i++)
-			components[i]->drawInterface();
+		ImGui::TextUnformatted("Budget: ");
+		ImGui::SameLine();
+		ImGui::Text("%2.2f L.E", budget);
+		for each (auto& component in components)
+			component.second->drawInterface();
 	}
 	onDrawInterfaceBuilding();
 	ImGui::End();
