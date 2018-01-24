@@ -15,10 +15,13 @@ void ResidentComponent::onUpdateComponent(double elapsedSeconds)
 
 void ResidentComponent::onDrawInterfaceComponent()
 {
+#ifdef USE_SFGUI_INTERFACE
+#else
 	ImGui::TextUnformatted("Housing Quality: ");
 	ImGui::SameLine();
 	ImGui::Text("%2.2f", housingQuality);
 	ImGui::TextUnformatted("Capacity: ");
 	ImGui::SameLine();
 	ImGui::Text("%d human", capacity);
+#endif
 }

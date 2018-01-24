@@ -18,7 +18,10 @@ void BuildingComponent::update(double elapsedSeconds)
 
 void BuildingComponent::drawInterface()
 {
+#ifdef USE_SFGUI_INTERFACE
+#else
 	ImGui::Separator();
 	onDrawInterfaceComponent();
 	ImGui::Separator();
+#endif
 }

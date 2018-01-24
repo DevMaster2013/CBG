@@ -27,6 +27,8 @@ void Building::update(double elapsedSeconds)
 
 void Building::drawInterface()
 {
+#ifdef USE_SFGUI_INTERFACE
+#else
 	ImGui::SetNextWindowSize(ImVec2(1200, 700), ImGuiSetCond_FirstUseEver);
 	if (ImGui::Begin(name.c_str()))
 	{
@@ -38,4 +40,5 @@ void Building::drawInterface()
 	}
 	onDrawInterfaceBuilding();
 	ImGui::End();
+#endif
 }

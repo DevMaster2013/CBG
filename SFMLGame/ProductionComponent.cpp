@@ -25,6 +25,8 @@ void ProductionComponent::onUpdateComponent(double elapsedSeconds)
 
 void ProductionComponent::onDrawInterfaceComponent()
 {
+#ifdef USE_SFGUI_INTERFACE
+#else
 	ImGui::TextUnformatted("Total Production: ");
 	ImGui::SameLine();
 	ImGui::Text("%2.2f ton", totalProduction);
@@ -37,4 +39,5 @@ void ProductionComponent::onDrawInterfaceComponent()
 			producedProducts[i]->drawInterface();
 	}
 	ImGui::EndChild();
+#endif
 }

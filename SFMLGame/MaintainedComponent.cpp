@@ -27,6 +27,8 @@ void MaintainedComponent::onUpdateComponent(double elapsedSeconds)
 
 void MaintainedComponent::onDrawInterfaceComponent()
 {
+#ifdef USE_SFGUI_INTERFACE
+#else
 	ImGui::TextUnformatted("Maintan after: ");
 	ImGui::SameLine();
 	double remTime = maintainenceTime - runningTime;
@@ -42,4 +44,5 @@ void MaintainedComponent::onDrawInterfaceComponent()
 		runningTime = 0.0;
 		parentBuilding->budget -= maintainenceCost;
 	}
+#endif
 }

@@ -88,6 +88,9 @@
     <Filter Include="Framework\Inline\Buildings">
       <UniqueIdentifier>{0516e099-f31b-499b-85c4-3ead7cf75404}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI Handlers">
+      <UniqueIdentifier>{3b2c6856-d0c1-48af-8b53-e81422749906}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Game Design\Game Design.txt">
