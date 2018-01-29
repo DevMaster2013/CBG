@@ -3,6 +3,8 @@
 #include <imgui.h>
 #include <imgui-SFML.h>
 #include <SFML/Graphics.hpp>
+#include <vector>
+#include "IronMine.h"
 
 class IGUIHandler
 {
@@ -21,14 +23,47 @@ class IGUIManager : public IGUIHandler
 {
 public:
 	sf::RenderWindow* renderWindow;
+	std::vector<IGUIHandler*> internalGUIHandlers;
+
 public:
 	IGUIManager(sf::RenderWindow* renderWindow) : renderWindow(renderWindow) {}
 public:
-	virtual void initializeGUI() = 0;
-	virtual void handleEvents(sf::Event& event) = 0;
-	virtual void updateGUI(double elapsedSeconds) = 0;
-	virtual void renderGUI() = 0;
-	virtual void releaseGUI() = 0;
+	virtual void initializeGUI()
+	{
+		onInitializeGUI();
+		for (size_t i = 0; i < internalGUIHandlers.size(); i++)
+			internalGUIHandlers[i]->initializeGUI();
+	}
+	virtual void handleEvents(sf::Event& event)
+	{
+		onHandleEvents(event);
+		for (size_t i = 0; i < internalGUIHandlers.size(); i++)
+			internalGUIHandlers[i]->handleEvents(event);
+	}
+	virtual void updateGUI(double elapsedSeconds)
+	{
+		onUpdateGUI(elapsedSeconds);
+		for (size_t i = 0; i < internalGUIHandlers.size(); i++)
+			internalGUIHandlers[i]->updateGUI(elapsedSeconds);
+	}
+	virtual void renderGUI()
+	{		
+		for (size_t i = 0; i < internalGUIHandlers.size(); i++)
+			internalGUIHandlers[i]->renderGUI();
+		onRenderGUI();
+	}
+	virtual void releaseGUI()
+	{
+		for (size_t i = 0; i < internalGUIHandlers.size(); i++)
+			internalGUIHandlers[i]->releaseGUI();
+		onReleaseGUI();
+	}
+protected:
+	virtual void onInitializeGUI() = 0;
+	virtual void onHandleEvents(sf::Event& event) = 0;
+	virtual void onUpdateGUI(double elapsedSeconds) = 0;
+	virtual void onRenderGUI() = 0;
+	virtual void onReleaseGUI() = 0;
 public:
 	static IGUIManager* getGUIManager(sf::RenderWindow* renderWindow, GUIManagerType managerType);
 };
@@ -40,8 +75,8 @@ public:
 	sfg::Desktop desktop;
 public:
 	SFGUIManager(sf::RenderWindow* renderWindow) : IGUIManager(renderWindow) {}
-public:
-	virtual void initializeGUI() override
+private:
+	virtual void onInitializeGUI() override
 	{
 		renderWindow->resetGLStates();
 
@@ -60,19 +95,19 @@ public:
 
 		desktop.Add(sfguiWindow);		
 	}
-	virtual void handleEvents(sf::Event& event) override
+	virtual void onHandleEvents(sf::Event& event) override
 	{
 		desktop.HandleEvent(event);
 	}
-	virtual void updateGUI(double elapsedSeconds) override
+	virtual void onUpdateGUI(double elapsedSeconds) override
 	{
 		desktop.Update(elapsedSeconds);
 	}
-	virtual void renderGUI() override
+	virtual void onRenderGUI() override
 	{
 		sfgui.Display(*renderWindow);
 	}
-	virtual void releaseGUI() override
+	virtual void onReleaseGUI() override
 	{
 	}
 };
@@ -81,20 +116,20 @@ class ImGUIManager : public IGUIManager
 {
 public:
 	ImGUIManager(sf::RenderWindow* renderWindow) : IGUIManager(renderWindow) {}
-public:
-	virtual void initializeGUI() override
+private:
+	virtual void onInitializeGUI() override
 	{
 		ImGui::SFML::Init(*renderWindow);
 	}
-	virtual void handleEvents(sf::Event& event) override
+	virtual void onHandleEvents(sf::Event& event) override
 	{
 		ImGui::SFML::ProcessEvent(event);
 	}
-	virtual void updateGUI(double elapsedSeconds) override
+	virtual void onUpdateGUI(double elapsedSeconds) override
 	{
 		ImGui::SFML::Update(*renderWindow, sf::seconds(elapsedSeconds));
 	}
-	virtual void renderGUI() override
+	virtual void onRenderGUI() override
 	{
 		ImGui::Begin("Hello world!");
 		if (ImGui::Button("Greet SFGUI!"))
@@ -108,7 +143,7 @@ public:
 		ImGui::End();
 		ImGui::SFML::Render(*renderWindow);
 	}
-	virtual void releaseGUI() override
+	virtual void onReleaseGUI() override
 	{
 		ImGui::SFML::Shutdown();
 	}
@@ -133,6 +168,8 @@ int main(int argc, char* argv[])
 	sf::View cameraView = window.getDefaultView();
 	IGUIManager* guiManager = IGUIManager::getGUIManager(&window, GUIManagerType::SFGUI);
 	guiManager->initializeGUI();
+
+	IronMine ironMine;	
 
 	sf::Clock clock;	
 	while (window.isOpen())

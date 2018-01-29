@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectsManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLExport.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderable.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectsManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{5c013419-46f7-45d6-898a-0a40b6831597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{714d9efe-4fa7-4b81-8302-1848d29e7f45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

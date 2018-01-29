@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{a11052d3-18bd-40b1-8a85-72d5b0e72a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{ba0f7b6c-995c-4a34-a9b2-0eba26d78abb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DLLExport.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderableFactory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderableFactory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="ICustomGameObjectRenderer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLMain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderableFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ICustomGameObjectRenderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
