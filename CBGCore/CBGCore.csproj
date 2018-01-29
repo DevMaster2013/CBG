@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Government\Building.cs" />
     <Compile Include="Government\City.cs" />
+    <Compile Include="Production\ProductionSite.cs" />
+    <Compile Include="Production\ProductProduction.cs" />
     <Compile Include="Product\Product.cs" />
     <Compile Include="Product\ProductPrice.cs" />
     <Compile Include="Product\ProductQuantity.cs" />

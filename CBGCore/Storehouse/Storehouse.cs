@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CBGCore.Product;
+using CBGCore.Government;
 
 namespace CBGCore.Storehouse
 {
-    public class Storehouse
+    public class Storehouse : Building
     {
         private List<ProductQuantity> _storedProducts;
         private long _storeCapacity;
@@ -54,13 +55,14 @@ namespace CBGCore.Storehouse
         }        
 
         public Storehouse(long storeCapacity)
+            : base("Storehouse")
         {
             StoreCapacity = storeCapacity;
             _storedProducts = new List<ProductQuantity>();
         }
 
         public Product.ProductQuantity getProductQuantity(Product.Product product)
-        {
+        {            
             return (from pr in _storedProducts
                     where pr.Product == product
                     select pr).FirstOrDefault();
